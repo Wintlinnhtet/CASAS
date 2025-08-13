@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bluish_white"
+    tools:context=".TimetableFragment">
+    <!-- 🕒 DateTime TextView -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:src="@drawable/timetable_24px"
+            android:layout_marginStart="30dp"
+            />
+        <TextView
+            android:id="@+id/dateTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="@string/loading_date_time"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="80dp"/>
+
+    </FrameLayout>
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent"
+        android:background="@drawable/upcoming_class_card"
+        android:layout_marginTop="100dp">
+
+        <!-- TabLayout for 7-day tabs -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/weekTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/white"
+            app:tabGravity="fill"
+            app:tabIndicatorAnimationMode="linear"
+            app:tabIndicatorColor="@color/bluish_white"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorGravity="bottom"
+            app:tabIndicatorHeight="5dp"
+            app:tabMode="scrollable"
+            app:tabPadding="20dp"
+            app:tabRippleColor="@color/white"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextAppearance="@style/TabTextStyle"
+            app:tabTextColor="@color/light_blue" />
+
+        <!-- ViewPager2 to hold each day's fragment -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/weekViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</FrameLayout>

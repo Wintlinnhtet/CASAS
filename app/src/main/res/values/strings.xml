@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CASAS</string>
+    <string name="time_table">Time table</string>
+    <string name="courses">Courses</string>
+    <string name="home">Home</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_fragment">This is home fragment</string>
+    <string name="course_fragment">This is course fragment.</string>
+    <string name="timetable_fragment">This is timetable fragment.</string>
+    <string name="login">Login</string>
+    <string name="loading_date_time"><![CDATA[Loading date & time...]]></string>
+    <string name="Time"></string>
+    <string name="user_name">Hi,Hla Hla</string>
+    <string name="date">date</string>
+    <string name="course">High Performance Computing Technology</string>
+    <string name="courseId">HPC-8115</string>
+</resources>
