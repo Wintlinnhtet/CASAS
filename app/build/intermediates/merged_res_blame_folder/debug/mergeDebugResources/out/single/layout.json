@@ -1,38 +1,30 @@
 [
     {
-        "merged": "com.example.casas.app-mergeDebugResources-32:/layout/fragment_courses.xml",
-        "source": "com.example.casas.app-main-35:/layout/fragment_courses.xml"
+        "merged": "com.example.casas.app-mergeDebugResources-34:/layout/activity_dashboard.xml",
+        "source": "com.example.casas.app-main-37:/layout/activity_dashboard.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-mergeDebugResources-32:\\layout\\course_cardview.xml",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\layout\\course_cardview.xml"
+        "merged": "com.example.casas.app-mergeDebugResources-34:/layout/fragment_courses.xml",
+        "source": "com.example.casas.app-main-37:/layout/fragment_courses.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-mergeDebugResources-32:\\layout\\fragment_courses.xml",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\layout\\fragment_courses.xml"
+        "merged": "com.example.casas.app-mergeDebugResources-34:/layout/fragment_timetable.xml",
+        "source": "com.example.casas.app-main-37:/layout/fragment_timetable.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-mergeDebugResources-32:\\layout\\card_view.xml",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\layout\\card_view.xml"
+        "merged": "com.example.casas.app-mergeDebugResources-34:/layout/card_view.xml",
+        "source": "com.example.casas.app-main-37:/layout/card_view.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-mergeDebugResources-32:\\layout\\fragment_home.xml",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\layout\\fragment_home.xml"
+        "merged": "com.example.casas.app-mergeDebugResources-34:/layout/activity_main.xml",
+        "source": "com.example.casas.app-main-37:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-mergeDebugResources-32:\\layout\\activity_course_attendance.xml",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\layout\\activity_course_attendance.xml"
+        "merged": "com.example.casas.app-mergeDebugResources-34:/layout/fragment_home.xml",
+        "source": "com.example.casas.app-main-37:/layout/fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-mergeDebugResources-32:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-mergeDebugResources-32:\\layout\\activity_dashboard.xml",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\layout\\activity_dashboard.xml"
-    },
-    {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-mergeDebugResources-32:\\layout\\fragment_timetable.xml",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\layout\\fragment_timetable.xml"
+        "merged": "com.example.casas.app-mergeDebugResources-34:/layout/course_cardview.xml",
+        "source": "com.example.casas.app-main-37:/layout/course_cardview.xml"
     }
 ]

@@ -7,6 +7,24 @@
     <uses-sdk
         android:minSdkVersion="26"
         android:targetSdkVersion="36" />
+    <!-- Foreground service permissions -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- If targetSdk 34 (Android 14) and you use foregroundServiceType="dataSync": -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+
+    <!-- Existing ones you already had -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.NEARBY_WIFI_DEVICES"
+        android:usesPermissionFlags="neverForLocation" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Android 13+ (for posting the FGS notification) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" /> <!-- suppress DeprecatedClassUsageInspection -->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
     <permission
         android:name="com.example.casas.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -27,6 +45,11 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.CASAS" >
+        <service
+            android:name="com.example.casas.MqttForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+
         <activity
             android:name="com.example.casas.activity_dashboard"
             android:exported="false" />

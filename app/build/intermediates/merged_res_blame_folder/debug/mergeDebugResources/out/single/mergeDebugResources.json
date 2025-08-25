@@ -1,138 +1,130 @@
 [
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\drawable_course_24px.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\drawable\\course_24px.xml"
+        "merged": "com.example.casas.app-debug-35:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.casas.app-main-37:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.casas.app-debug-35:/layout_activity_main.xml.flat",
+        "source": "com.example.casas.app-main-37:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.example.casas.app-debug-35:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "com.example.casas.app-main-37:/mipmap-anydpi/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\mipmap-anydpi_ic_launcher.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\mipmap-anydpi\\ic_launcher.xml"
+        "merged": "com.example.casas.app-debug-35:/drawable_baseline_people_alt_24.xml.flat",
+        "source": "com.example.casas.app-main-37:/drawable/baseline_people_alt_24.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.example.casas.app-debug-35:/xml_backup_rules.xml.flat",
+        "source": "com.example.casas.app-main-37:/xml/backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\drawable\\ic_launcher_foreground.xml"
+        "merged": "com.example.casas.app-debug-35:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.casas.app-main-37:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\layout_course_cardview.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\layout\\course_cardview.xml"
+        "merged": "com.example.casas.app-debug-35:/drawable_upcoming_class_card.xml.flat",
+        "source": "com.example.casas.app-main-37:/drawable/upcoming_class_card.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\layout_fragment_courses.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\layout\\fragment_courses.xml"
+        "merged": "com.example.casas.app-debug-35:/menu_bottom_menu.xml.flat",
+        "source": "com.example.casas.app-main-37:/menu/bottom_menu.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\layout_activity_course_attendance.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\layout\\activity_course_attendance.xml"
+        "merged": "com.example.casas.app-debug-35:/drawable_lock_24px.xml.flat",
+        "source": "com.example.casas.app-main-37:/drawable/lock_24px.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\drawable_lock_24px.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\drawable\\lock_24px.xml"
+        "merged": "com.example.casas.app-debug-35:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.casas.app-main-37:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\layout\\fragment_home.xml"
+        "merged": "com.example.casas.app-debug-35:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.casas.app-main-37:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.example.casas.app-debug-35:/layout_activity_dashboard.xml.flat",
+        "source": "com.example.casas.app-main-37:/layout/activity_dashboard.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\layout_fragment_timetable.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\layout\\fragment_timetable.xml"
+        "merged": "com.example.casas.app-debug-35:/layout_fragment_timetable.xml.flat",
+        "source": "com.example.casas.app-main-37:/layout/fragment_timetable.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.example.casas.app-debug-35:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.casas.app-main-37:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\layout_activity_dashboard.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\layout\\activity_dashboard.xml"
+        "merged": "com.example.casas.app-debug-35:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.casas.app-main-37:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.casas.app-debug-35:/layout_fragment_home.xml.flat",
+        "source": "com.example.casas.app-main-37:/layout/fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\menu_bottom_menu.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\menu\\bottom_menu.xml"
+        "merged": "com.example.casas.app-debug-35:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.casas.app-main-37:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.example.casas.app-debug-35:/drawable_custom_edittext.xml.flat",
+        "source": "com.example.casas.app-main-37:/drawable/custom_edittext.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\mipmap-anydpi_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\mipmap-anydpi\\ic_launcher_round.xml"
+        "merged": "com.example.casas.app-debug-35:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.casas.app-main-37:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.casas.app-debug-35:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.casas.app-main-37:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.casas.app-debug-33:/layout_fragment_courses.xml.flat",
-        "source": "com.example.casas.app-main-35:/layout/fragment_courses.xml"
+        "merged": "com.example.casas.app-debug-35:/layout_fragment_courses.xml.flat",
+        "source": "com.example.casas.app-main-37:/layout/fragment_courses.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\drawable_timetable_24px.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\drawable\\timetable_24px.xml"
+        "merged": "com.example.casas.app-debug-35:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.casas.app-main-37:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.example.casas.app-debug-35:/drawable_timetable_24px.xml.flat",
+        "source": "com.example.casas.app-main-37:/drawable/timetable_24px.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\drawable_upcoming_class_card.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\drawable\\upcoming_class_card.xml"
+        "merged": "com.example.casas.app-debug-35:/drawable_course_24px.xml.flat",
+        "source": "com.example.casas.app-main-37:/drawable/course_24px.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\xml\\backup_rules.xml"
+        "merged": "com.example.casas.app-debug-35:/drawable_home_24px.xml.flat",
+        "source": "com.example.casas.app-main-37:/drawable/home_24px.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\drawable_custom_edittext.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\drawable\\custom_edittext.xml"
+        "merged": "com.example.casas.app-debug-35:/layout_card_view.xml.flat",
+        "source": "com.example.casas.app-main-37:/layout/card_view.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\layout\\activity_main.xml"
+        "merged": "com.example.casas.app-debug-35:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "com.example.casas.app-main-37:/mipmap-anydpi/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\drawable_home_24px.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\drawable\\home_24px.xml"
+        "merged": "com.example.casas.app-debug-35:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.casas.app-main-37:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.example.casas.app-debug-35:/layout_course_cardview.xml.flat",
+        "source": "com.example.casas.app-main-37:/layout/course_cardview.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\xml\\data_extraction_rules.xml"
+        "merged": "com.example.casas.app-debug-35:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.casas.app-main-37:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\layout_card_view.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\layout\\card_view.xml"
+        "merged": "com.example.casas.app-debug-35:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.casas.app-main-37:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\drawable_login_bg.png.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\drawable\\login_bg.png"
-    },
-    {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\drawable_baseline_people_alt_24.xml.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\drawable\\baseline_people_alt_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-debug-33:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\rinn\\.gradle\\daemon\\8.13\\com.example.casas.app-main-35:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "com.example.casas.app-debug-35:/drawable_login_bg.png.flat",
+        "source": "com.example.casas.app-main-37:/drawable/login_bg.png"
     }
 ]
