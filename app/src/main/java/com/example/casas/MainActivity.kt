@@ -25,6 +25,8 @@ import java.net.NetworkInterface
 import java.text.SimpleDateFormat
 import java.util.*
 
+private val biometric: Any
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

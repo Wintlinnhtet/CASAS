@@ -10,9 +10,12 @@
     <string name="timetable_fragment">This is timetable fragment.</string>
     <string name="login">Login</string>
     <string name="loading_date_time"><![CDATA[Loading date & time...]]></string>
-    <string name="Time"></string>
+<!--    <string name="Time"></string>-->
     <string name="user_name">Hi,Hla Hla</string>
     <string name="date">date</string>
     <string name="course">High Performance Computing Technology</string>
     <string name="courseId">HPC-8115</string>
+    <string name="AttendanceStartTime">10:00 am</string>
+    <string name="AttendanceEndtime">12:00 pm</string>
+    <string name="AttendanceDate">21-8-25</string>
 </resources>

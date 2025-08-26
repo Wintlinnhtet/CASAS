@@ -5,61 +5,96 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
-
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="7dp"
-        android:backgroundTint="@color/bluish_white"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        android:padding="16dp"
+        tools:ignore="MissingConstraints">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            >
+            app:cardCornerRadius="16dp"
+            android:background="@color/white"
+            app:cardElevation="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/courseContainer"
+                android:id="@+id/course_cardview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:textAlignment="viewStart"
-                android:background="@color/white"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
+                android:padding="16dp"
+                android:background="@color/dark_teal">
 
-                <TextView
-                    android:id="@+id/course"
-                    android:layout_width="match_parent"
-                    android:layout_height="85dp"
-                    android:maxLines="2"
-                    android:padding="20dp"
-                    android:text="@string/course"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintVertical_bias="1.0" />
+                <!-- Left section -->
+                <LinearLayout
+                    android:id="@+id/leftSection"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/rightSection"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/courseName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="High Performance technology"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Right section -->
+                <LinearLayout
+                    android:id="@+id/rightSection"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/leftSection"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/chapterLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="University of Information Technology"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/chapterName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HPC-8115"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:paddingTop="4dp"/>
+                    <Button
+                        android:id="@+id/continueButton"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Continue"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="50dp"
+                        android:padding="10dp"/>
+                </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/courseId"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="20dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:text="@string/courseId"
-                android:textColor="@color/white"
-                android:background="@color/dark_teal"
-                android:textSize="16sp"
-                app:layout_constraintTop_toBottomOf="@id/courseContainer"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
