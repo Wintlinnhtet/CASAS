@@ -4,6 +4,8 @@ package com.example.casas.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,20 +22,38 @@ public final class CourseCardviewBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView course;
+  public final Button continueButton;
 
   @NonNull
-  public final ConstraintLayout courseContainer;
+  public final ConstraintLayout courseCardview;
 
   @NonNull
   public final TextView courseId;
 
-  private CourseCardviewBinding(@NonNull ConstraintLayout rootView, @NonNull TextView course,
-      @NonNull ConstraintLayout courseContainer, @NonNull TextView courseId) {
+  @NonNull
+  public final TextView courseName;
+
+  @NonNull
+  public final LinearLayout leftSection;
+
+  @NonNull
+  public final LinearLayout rightSection;
+
+  @NonNull
+  public final TextView universityTextView;
+
+  private CourseCardviewBinding(@NonNull ConstraintLayout rootView, @NonNull Button continueButton,
+      @NonNull ConstraintLayout courseCardview, @NonNull TextView courseId,
+      @NonNull TextView courseName, @NonNull LinearLayout leftSection,
+      @NonNull LinearLayout rightSection, @NonNull TextView universityTextView) {
     this.rootView = rootView;
-    this.course = course;
-    this.courseContainer = courseContainer;
+    this.continueButton = continueButton;
+    this.courseCardview = courseCardview;
     this.courseId = courseId;
+    this.courseName = courseName;
+    this.leftSection = leftSection;
+    this.rightSection = rightSection;
+    this.universityTextView = universityTextView;
   }
 
   @Override
@@ -63,15 +83,15 @@ public final class CourseCardviewBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.course;
-      TextView course = ViewBindings.findChildViewById(rootView, id);
-      if (course == null) {
+      id = R.id.continueButton;
+      Button continueButton = ViewBindings.findChildViewById(rootView, id);
+      if (continueButton == null) {
         break missingId;
       }
 
-      id = R.id.courseContainer;
-      ConstraintLayout courseContainer = ViewBindings.findChildViewById(rootView, id);
-      if (courseContainer == null) {
+      id = R.id.course_cardview;
+      ConstraintLayout courseCardview = ViewBindings.findChildViewById(rootView, id);
+      if (courseCardview == null) {
         break missingId;
       }
 
@@ -81,8 +101,32 @@ public final class CourseCardviewBinding implements ViewBinding {
         break missingId;
       }
 
-      return new CourseCardviewBinding((ConstraintLayout) rootView, course, courseContainer,
-          courseId);
+      id = R.id.courseName;
+      TextView courseName = ViewBindings.findChildViewById(rootView, id);
+      if (courseName == null) {
+        break missingId;
+      }
+
+      id = R.id.leftSection;
+      LinearLayout leftSection = ViewBindings.findChildViewById(rootView, id);
+      if (leftSection == null) {
+        break missingId;
+      }
+
+      id = R.id.rightSection;
+      LinearLayout rightSection = ViewBindings.findChildViewById(rootView, id);
+      if (rightSection == null) {
+        break missingId;
+      }
+
+      id = R.id.universityTextView;
+      TextView universityTextView = ViewBindings.findChildViewById(rootView, id);
+      if (universityTextView == null) {
+        break missingId;
+      }
+
+      return new CourseCardviewBinding((ConstraintLayout) rootView, continueButton, courseCardview,
+          courseId, courseName, leftSection, rightSection, universityTextView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

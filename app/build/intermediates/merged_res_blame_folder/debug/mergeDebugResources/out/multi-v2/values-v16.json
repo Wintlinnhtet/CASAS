@@ -4,7 +4,7 @@
             "outputFile": "com.example.casas.app-mergeDebugResources-33:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.13\\transforms\\31de92f3540a5eb7f1918056eedd01b6\\transformed\\appcompat-1.7.1\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\rinn\\.gradle\\caches\\8.13\\transforms\\31de92f3540a5eb7f1918056eedd01b6\\transformed\\appcompat-1.7.1\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

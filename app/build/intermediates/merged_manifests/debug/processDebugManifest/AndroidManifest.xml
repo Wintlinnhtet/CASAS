@@ -54,6 +54,9 @@
             android:name="com.example.casas.activity_dashboard"
             android:exported="false" />
         <activity
+            android:name="com.example.casas.AttendanceActivity"
+            android:exported="true" />
+        <activity
             android:name="com.example.casas.MainActivity"
             android:exported="true" >
             <intent-filter>

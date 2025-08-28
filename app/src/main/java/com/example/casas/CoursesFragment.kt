@@ -32,16 +32,12 @@ class CoursesFragment : Fragment() {
 
         // Dummy course data
         val courseList = listOf(
-            Courses("High Performance Computing Technology", "HPC - 8115"),
-            Courses("High Performance Computing Technology", "HPC - 8115"),
-            Courses("High Performance Computing Technology", "HPC - 8115"),
-            Courses("High Performance Computing Technology", "HPC - 8115"),
-            Courses("High Performance Computing Technology", "HPC - 8115"),
-            Courses("High Performance Computing Technology", "HPC - 8115"),
-            Courses("Last above", "C003"),
-            Courses("Last course", "C003"),
+            Courses("High Performance Computing Technology", "HPC-8115", attendanceInfo = "Attendance data 1"),
+            Courses("Artificial Intelligence", "AI-1023", attendanceInfo = "Attendance data 2"),
+            Courses("Data Science", "DS-101", attendanceInfo = "Attendance data 3"),
+            Courses("Machine Learning", "ML-202", attendanceInfo = "Attendance data 4")
         )
-        coursesAdapter = CoursesAdapter(courseList)
+        coursesAdapter = CoursesAdapter(requireContext(), courseList)
         recyclerView.adapter = coursesAdapter
 
         return view

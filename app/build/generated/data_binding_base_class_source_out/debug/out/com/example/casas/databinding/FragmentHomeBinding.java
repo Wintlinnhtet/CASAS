@@ -28,13 +28,18 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final RecyclerView upComingRecyclerView;
 
   @NonNull
+  public final TextView upcomingLabel;
+
+  @NonNull
   public final ImageView userImg;
 
   private FragmentHomeBinding(@NonNull FrameLayout rootView, @NonNull TextView dateTextView,
-      @NonNull RecyclerView upComingRecyclerView, @NonNull ImageView userImg) {
+      @NonNull RecyclerView upComingRecyclerView, @NonNull TextView upcomingLabel,
+      @NonNull ImageView userImg) {
     this.rootView = rootView;
     this.dateTextView = dateTextView;
     this.upComingRecyclerView = upComingRecyclerView;
+    this.upcomingLabel = upcomingLabel;
     this.userImg = userImg;
   }
 
@@ -77,6 +82,12 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.upcomingLabel;
+      TextView upcomingLabel = ViewBindings.findChildViewById(rootView, id);
+      if (upcomingLabel == null) {
+        break missingId;
+      }
+
       id = R.id.userImg;
       ImageView userImg = ViewBindings.findChildViewById(rootView, id);
       if (userImg == null) {
@@ -84,7 +95,7 @@ public final class FragmentHomeBinding implements ViewBinding {
       }
 
       return new FragmentHomeBinding((FrameLayout) rootView, dateTextView, upComingRecyclerView,
-          userImg);
+          upcomingLabel, userImg);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

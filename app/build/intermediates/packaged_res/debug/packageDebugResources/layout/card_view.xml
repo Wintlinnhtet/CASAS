@@ -54,7 +54,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:maxLines="2"
-                    android:text="Mobile and Ubiquitous Computing"
+                    android:text="@string/courseNameLabel"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -66,7 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:text="Room - 331"
+                    android:text="@string/roomId"
                     android:textColor="@color/bluish_white"
                     android:textSize="14sp"
                     app:layout_constraintTop_toBottomOf="@id/subject" />
@@ -76,7 +76,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:text="Dr Aye Myat Myat Paing"
+                    android:text="@string/courseTrName"
                     android:textColor="@color/bluish_white"
                     android:textSize="14sp"
                     app:layout_constraintTop_toBottomOf="@id/place" />

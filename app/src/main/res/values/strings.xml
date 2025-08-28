@@ -18,4 +18,11 @@
     <string name="AttendanceStartTime">10:00 am</string>
     <string name="AttendanceEndtime">12:00 pm</string>
     <string name="AttendanceDate">21-8-25</string>
+    <string name="roomId">Room - 331</string>
+    <string name="section">A\n</string>
+    <string name="semester">7\n</string>
+    <string name="courseNameLabel">High Performance technology</string>
+    <string name="courseTrName">Dr Aye Myat Myat Paing</string>
+    <string name="courseStartTime">09:00 AM</string>
+    <string name="courseEndTime">10:00 AM</string>
 </resources>

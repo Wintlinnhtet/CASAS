@@ -44,7 +44,7 @@
                         android:id="@+id/courseName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="High Performance technology"
+                        android:text="@string/courseNameLabel"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
@@ -64,15 +64,16 @@
                     android:layout_weight="1">
 
                     <TextView
-                        android:id="@+id/chapterLabel"
+                        android:id="@+id/universityTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="University of Information Technology"
-                        android:textSize="12sp"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                    />
 
                     <TextView
-                        android:id="@+id/chapterName"
+                        android:id="@+id/courseId"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="HPC-8115"
