@@ -24,6 +24,10 @@ import java.net.Inet4Address
 import java.net.NetworkInterface
 import java.text.SimpleDateFormat
 import java.util.*
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
+import android.net.wifi.WifiInfo
+import android.net.wifi.WifiManager
 
 class MainActivity : AppCompatActivity() {
 
@@ -148,16 +152,77 @@ class MainActivity : AppCompatActivity() {
 
         prompt.authenticate(info)
     }
+    @Suppress("DEPRECATION")
+    private fun currentSsidBssid(): Pair<String, String> {
+        try {
+            val cm = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+            cm.activeNetwork?.let { net ->
+                cm.getNetworkCapabilities(net)?.let { caps ->
+                    if (caps.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
+                        (caps.transportInfo as? WifiInfo)?.let { w ->
+                            val ssid = (w.ssid ?: "Unknown").trim('"')
+                            val bssid = w.bssid ?: "Unknown"
+                            val clean = if (bssid == "02:00:00:00:00:00") "Unknown" else bssid
+                            if (ssid != "<unknown ssid>" || clean != "Unknown") return ssid to clean
+                        }
+                    }
+                }
+            }
+            // Fallback for older devices / OEMs
+            val wm = applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
+            wm.connectionInfo?.let { info ->
+                val ssid = (info.ssid ?: "Unknown").trim('"')
+                val bssid = info.bssid ?: "Unknown"
+                val clean = if (bssid == "02:00:00:00:00:00") "Unknown" else bssid
+                return ssid to clean
+            }
+        } catch (_: Exception) { }
+        return "Unknown" to "Unknown"
+    }
 
-    // ===== MQTT PUBLISH =====
+    private fun debugWifiAccess() {
+        val hasFine = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+        val hasCoarse = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
+        val hasNearby = if (Build.VERSION.SDK_INT >= 33)
+            ContextCompat.checkSelfPermission(this, Manifest.permission.NEARBY_WIFI_DEVICES) == PackageManager.PERMISSION_GRANTED
+        else true
+
+        val lm = getSystemService(Context.LOCATION_SERVICE) as android.location.LocationManager
+        val locationOn = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) lm.isLocationEnabled else {
+            try { Settings.Secure.getInt(contentResolver, Settings.Secure.LOCATION_MODE) != 0 } catch (_: Exception) { false }
+        }
+
+        val cm = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val active = cm.activeNetwork
+        val caps = active?.let { cm.getNetworkCapabilities(it) }
+        val isWifi = caps?.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) == true
+        val wifiInfo = caps?.transportInfo as? WifiInfo
+
+        android.util.Log.i("WifiDiag",
+            "fine=$hasFine coarse=$hasCoarse nearby=$hasNearby locOn=$locationOn isWifi=$isWifi " +
+                    "wifiInfo=${wifiInfo != null} ssid=${wifiInfo?.ssid} bssid=${wifiInfo?.bssid}")
+
+        if (!hasFine) {
+            Toast.makeText(this, "Grant PRECISE Location permission (not Approximate).", Toast.LENGTH_LONG).show()
+        }
+        if (!locationOn) {
+            Toast.makeText(this, "Turn ON device Location in Quick Settings.", Toast.LENGTH_LONG).show()
+        }
+        if (!isWifi) {
+            Toast.makeText(this, "Not on Wi-Fi (or MIUI is masking). Connect to a normal Wi-Fi.", Toast.LENGTH_LONG).show()
+        }
+    }
+
     private fun publishAttendanceEvent() {
-        val ssid = currentSsid()
+        val (ssid, bssid) = currentSsidBssid()
+        android.util.Log.d("WifiCheck", "SSID=$ssid  BSSID=$bssid")
+
         val ip = localIpv4()
         val ts = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX", Locale.getDefault()).format(Date())
-
         val payload = JSONObject().apply {
             put("userId", "app_user_001")
             put("wifiSsid", ssid)
+            put("wifiBssid", bssid)
             put("wifiIpAddress", ip)
             put("timestamp", ts)
         }.toString()
@@ -170,23 +235,36 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+
     // ===== PERMISSIONS (for SSID on Android 10–14) =====
     private fun requestWifiPermissionsIfNeeded() {
+        val needsFine = ContextCompat.checkSelfPermission(
+            this, Manifest.permission.ACCESS_FINE_LOCATION
+        ) != PackageManager.PERMISSION_GRANTED
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            val hasNearby =
-                ContextCompat.checkSelfPermission(this, Manifest.permission.NEARBY_WIFI_DEVICES) ==
-                        PackageManager.PERMISSION_GRANTED
-            if (!hasNearby) {
+            val needsNearby = ContextCompat.checkSelfPermission(
+                this, Manifest.permission.NEARBY_WIFI_DEVICES
+            ) != PackageManager.PERMISSION_GRANTED
+
+            // 🔹 On API 33/34 you need BOTH: NEARBY + FINE
+            if (needsNearby) {
                 requestNearbyWifiPermLauncher.launch(Manifest.permission.NEARBY_WIFI_DEVICES)
             }
+            if (needsFine) {
+                requestLocationPermsLauncher.launch(
+                    arrayOf(
+                        Manifest.permission.ACCESS_FINE_LOCATION,
+                        Manifest.permission.ACCESS_COARSE_LOCATION
+                    )
+                )
+            }
         } else {
-            val needFine =
-                ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) !=
-                        PackageManager.PERMISSION_GRANTED
-            val needCoarse =
-                ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) !=
-                        PackageManager.PERMISSION_GRANTED
-            if (needFine || needCoarse) {
+            val needsCoarse = ContextCompat.checkSelfPermission(
+                this, Manifest.permission.ACCESS_COARSE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+            if (needsFine || needsCoarse) {
                 requestLocationPermsLauncher.launch(
                     arrayOf(
                         Manifest.permission.ACCESS_COARSE_LOCATION,
@@ -195,7 +273,22 @@ class MainActivity : AppCompatActivity() {
                 )
             }
         }
+
+        // 🔹 Also ensure device Location is ON (otherwise SSID/BSSID are masked)
+        val lm = getSystemService(Context.LOCATION_SERVICE) as android.location.LocationManager
+        val locationOn = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            lm.isLocationEnabled
+        } else {
+            // simple fallback for very old devices
+            try { android.provider.Settings.Secure.getInt(contentResolver,
+                android.provider.Settings.Secure.LOCATION_MODE) != 0 } catch (_: Exception) { false }
+        }
+        if (!locationOn) {
+            Toast.makeText(this, "Turn on Location to read Wi-Fi SSID/BSSID", Toast.LENGTH_LONG).show()
+            startActivity(Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS))
+        }
     }
+
 
     // ===== NET HELPERS =====
     private fun currentSsid(): String {
@@ -217,4 +310,5 @@ class MainActivity : AppCompatActivity() {
             "N/A"
         } catch (_: Exception) { "N/A" }
     }
+
 }

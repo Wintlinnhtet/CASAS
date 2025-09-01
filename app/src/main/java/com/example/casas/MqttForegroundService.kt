@@ -24,7 +24,7 @@ class MqttForegroundService : Service() {
         private const val NOTIF_ID = 1001
 
         // 🔧 set your broker here
-        private const val BROKER_URI = "tcp://192.168.1.8:1883"
+        private const val BROKER_URI = "tcp://172.20.0.114:1883"
         private const val CLIENT_PREFIX = "AndroidPub-"
 
         // If you enable auth on broker later:

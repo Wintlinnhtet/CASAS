@@ -1,48 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-    <!-- Foreground service permissions -->
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <!-- If targetSdk 34 (Android 14) and you use foregroundServiceType="dataSync": -->
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Existing ones you already had -->
+    <!-- ==== Permissions (no duplicates, correct for SSID/BSSID + FGS) ==== -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.NEARBY_WIFI_DEVICES"
-        android:usesPermissionFlags="neverForLocation" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Location perms are REQUIRED to read SSID/BSSID on Android 10+ -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!-- Android 13+ (for posting the FGS notification) -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Android 13+ scoped Wi-Fi perm (keep it, but do NOT set neverForLocation) -->
+    <uses-permission android:name="android.permission.NEARBY_WIFI_DEVICES" />
+
+    <!-- Foreground service + type for data sync (MQTT) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+
+    <!-- Android 13+ posts your FGS notification -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CASAS">
 
+        <!-- Foreground MQTT service -->
         <service
             android:name=".MqttForegroundService"
             android:exported="false"
             android:foregroundServiceType="dataSync" />
 
+        <!-- Dashboard activity (no launcher) -->
         <activity
             android:name=".activity_dashboard"
             android:exported="false" />
+
+        <!-- Launcher activity: exported=true is REQUIRED on targetSdk 31+ -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+    </application>
 </manifest>
